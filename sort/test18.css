@@ -1,0 +1,19 @@
+#sh span {
+	background-color: red;
+	color: white;
+	font-size: 40px;
+	margin-right: 5px;
+	width: 10px;
+	display: inline-block;
+}
+
+#sh {
+	width: 800px;
+	height:350px;
+	margin: 40px auto 0; 
+}
+
+#put {
+	width: 600px;
+	margin: 0 auto;
+}

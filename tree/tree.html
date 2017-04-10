@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tree</title>
+	<link rel="stylesheet" type="text/css" href="tree.css">
+</head>
+<body>
+	<div id="buttons">
+		<input id="btn-1" type="button" value="前序遍历">
+		<input id="btn-3" type="button" value="后序遍历">
+	</div>
+	<div id="Search">
+		<input id="input" type="text" value="输入要查询的内容">
+		<input id="search" type="button" value="search">
+	</div>
+		
+	<div id="main"><span>a</span>
+		<div><span>b</span>
+			<div><span>c</span>
+				<div><span>d</span></div>
+				<div><span>e</span></div>
+				<div><span>f</span></div>
+				<div><span>g</span></div>
+			</div>
+			<div><span>h</span></div>
+			<div><span>i</span>
+				<div><span>j</span></div>
+				<div><span>k</span></div>
+			</div>
+		</div>
+
+		<div><span>l</span>
+			<div><span>m</span>
+				<div><span>n</span></div>
+				<div><span>o</span></div>
+				<div><span>p</span></div>
+			</div>
+			<div><span>q</span>
+				<div><span>r</span>
+					<div><span>s</span></div>
+				</div>
+				<div><span>t</span></div>
+			</div>
+		</div>
+
+		<div><span>u</span></div>
+	</div>
+
+	<div id="livebox">
+		<div id="b-box">
+			<input id="b-text" type="text" value="input">
+			<input id="b-add" type="button" value="添加">
+		</div>
+		<input id="b-del" type="button" value="删除">
+	</div>
+
+	<p>功能:<br>1.多叉树的前序、后序遍历的动画显示。<br>2.输入节点名称，默认以前序遍历查询。<br>3.点击a节点的子节点，会出现操作框。点击删除按钮，则将该节点及其所有子节点删除；点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置。
+	</p>
+
+
+	<script type="text/javascript" src="tree.js"></script>
+</body>
+</html>

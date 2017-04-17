@@ -52,6 +52,10 @@ table td {
 	background: red url(cubeHead.png) no-repeat 0 0;
 	position: relative;
 	transition-property: right,bottom,transform;  /*动画*/
+	transition-property: right,bottom,transform;  /*动画*/
+	-moz-transition-property: right,bottom,transform; /* Firefox 4 */
+	-webkit-transition-property:right,bottom,transform; /* Safari 和 Chrome */
+	-o-transition-property:right,bottom,transform;/* Opera */
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
 }

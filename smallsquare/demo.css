@@ -13,11 +13,12 @@ body {
 
 table {
 	border-collapse: collapse;    /*单元格间距为0*/
+	margin-bottom: 20px;
 }
 
 table th {
-	width: 40px;
-	height: 40px;
+	width: 6.5vw;
+	height: 6.5vw;
 }
 
 table tr:first-child th {       /*上边框*/
@@ -41,21 +42,20 @@ table tr:last-child td{      /*下边框*/
 }
 
 table td {
-	width: 40px;
-	height: 40px;
+	width: 6.5vw;
+	height: 6.5vw;
 	border-right: 1px solid rgb(210,210,210);
 	border-bottom: 1px solid rgb(210,210,210);
 }
 
 /*方块*/
 #cube {
-	background: red url(http://wx2.sinaimg.cn/mw690/005OLommgy1feq2gjdzy5j301400a048.jpg) no-repeat 0 0;
+	background: red url(cubeHead.png) repeat-x 0 0;
 	position: relative;
-	transition-property: right,bottom,transform;  /*动画*/
-	transition-property: right,bottom,transform;  /*动画*/
-	-moz-transition-property: right,bottom,transform; /* Firefox 4 */
-	-webkit-transition-property:right,bottom,transform; /* Safari 和 Chrome */
-	-o-transition-property:right,bottom,transform;/* Opera */
+	transition-property: right,bottom,transform,-webkit-transform,-o-transform;  /*动画*/
+	-moz-transition-property: right,bottom,transform,-moz-transform; /* Firefox 4 */
+	-webkit-transition-property:right,bottom,transform,-webkit-transform; /* Safari 和 Chrome */
+	-o-transition-property:right,bottom,transform,-o-transform;/* Opera */
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
 }
@@ -65,13 +65,13 @@ table td {
 
 #order {
 	margin-left: 40px;
-	width: 167px;
-	height: 30px;
+	width: 26vw;
+	height: 4.7vw;
 }
 
 #doing {
-	height: 30px;
-	width: 50px;
+	height: 4.7vw;
+	width: 7.8vw;
 	margin-left: 15px;
 }
 
@@ -79,14 +79,14 @@ table td {
 	margin-left: 40px;
 	margin-top: 30px;
 	display: flex;
-	width: 230px;
+	width: 36vw;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 #anniu input {
-	width: 80px;
-	height: 30px;
+	width: 12.5vw;
+	height: 4.7vw;
 	margin-bottom: 10px;
 }
 

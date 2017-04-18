@@ -52,10 +52,9 @@ table td {
 #cube {
 	background: red url(cubeHead.png) repeat-x 0 0;
 	position: relative;
-	transition-property: right,bottom,transform,-webkit-transform,-o-transform;  /*动画*/
-	-moz-transition-property: right,bottom,transform,-moz-transform; /* Firefox 4 */
-	-webkit-transition-property:right,bottom,transform,-webkit-transform; /* Safari 和 Chrome */
-	-o-transition-property:right,bottom,transform,-o-transform;/* Opera */
+	transition-property: right,bottom,transform;  /*动画*/
+	-moz-transition-property: right,bottom,-moz-transform; /* Firefox 4 */
+	-webkit-transition-property:right,bottom,-webkit-transform; /* Safari 和 Chrome */
 	transition-duration: 1s;
 	transition-timing-function: ease-out;
 }

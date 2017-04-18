@@ -9,6 +9,8 @@ var me={
 	a:0, //角度
 };
 
+var vw=window.innerWidth/100; 
+var cell=vw*6.5+1;
 
 order.addEventListener("focus",function(){
 	if (this.value==this.defaultValue) {
@@ -75,9 +77,9 @@ function move(xy){
 function where(who,a){
 	var i=who.replace("px","");
 	if (a==1) {
-		return parseInt(i)+41+"px";
+		return parseInt(i)+cell+"px";
 	}else if (a==0) {
-		return parseInt(i)-41+"px";
+		return parseInt(i)-cell+"px";
 	}	
 }
 

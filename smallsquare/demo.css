@@ -17,8 +17,8 @@ table {
 }
 
 table th {
-	width: 6.5vw;
-	height: 6.5vw;
+	width: 4vw;
+	height: 4vw;
 }
 
 table tr:first-child th {       /*上边框*/
@@ -42,8 +42,8 @@ table tr:last-child td{      /*下边框*/
 }
 
 table td {
-	width: 6.5vw;
-	height: 6.5vw;
+	width: 4vw;
+	height: 4vw;
 	border-right: 1px solid rgb(210,210,210);
 	border-bottom: 1px solid rgb(210,210,210);
 }
@@ -56,6 +56,7 @@ table td {
 	-moz-transition-property: right,bottom,-moz-transform; /* Firefox 4 */
 	-webkit-transition-property:right,bottom,-webkit-transform; /* Safari 和 Chrome */
 	transition-duration: 1s;
+	-webkit-transition-duration: 1s;
 	transition-timing-function: ease-out;
 }
 
@@ -65,13 +66,15 @@ table td {
 #order {
 	margin-left: 40px;
 	width: 26vw;
-	height: 4.7vw;
+	height: 4.5vw;
+	font-size: 2vw;
 }
 
 #doing {
-	height: 4.7vw;
+	height: 4.5vw;
 	width: 7.8vw;
-	margin-left: 15px;
+	margin-left: 1.5vw;
+	font-size: 2vw;
 }
 
 #anniu {
@@ -87,6 +90,12 @@ table td {
 	width: 12.5vw;
 	height: 4.7vw;
 	margin-bottom: 10px;
+	font-size: 1.5vw;
+}
+
+
+#menu {
+	margin-top: 20px;
 }
 
 

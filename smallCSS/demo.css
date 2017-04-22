@@ -1,0 +1,189 @@
+*,*::before,*::after{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {	
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 20;
+}
+
+.pic {
+	position: relative;
+}
+
+.pic figcaption {
+	z-index: 10;
+	padding: 30px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.pic .tit {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	opacity: 0;
+	box-shadow: 0 0 30px 20px rgba(0,0,0,.46);  /*边框阴影*/
+	transition: all .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pic .tit::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 0;
+	border:3px solid white;
+	border-width: 0 3px;
+	transition: all .5s;
+	visibility: hidden;
+
+}
+
+.pic .tit::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 0;
+	height: 100%;
+	border: 3px  solid white;
+	border-width: 3px 0;
+	transition: all .5s;
+	visibility: hidden;
+}
+
+.pic:hover .tit {
+	opacity: 1;
+}
+
+.pic:hover .tit::before {
+	height: 100%;
+	top: 0;
+	visibility: visible;	
+}
+
+.pic:hover .tit::after {
+	width: 100%;
+	left: 0;
+	visibility: visible;
+}	
+
+
+
+
+.pic img {
+	max-width: 800px;
+	height: 100%;
+	width: 100%;
+	transition: all .5s;
+}
+
+.pic:hover img {
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+
+/*文字渐变*/
+.colorchange {
+	background-image: -webkit-linear-gradient(left, #3498db,
+	 #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, 
+	 #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%,
+	 #ffd400 90%, #3498db);  /*制作渐变背景*/
+	color: transparent;   /*文字颜色透明*/
+	-webkit-text-fill-color:transparent;
+	background-clip: text;   /*文字裁剪背景*/
+	background-size: 200% 100%;   /*背景伸长一倍，*/
+	animation: wenzi 4s infinite linear;
+}
+
+@keyframes wenzi {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+@-webkit-keyframes wenzi {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+
+
+
+.changecolor {
+	color: transparent;
+	animation: lianjie 4s infinite linear;
+}
+
+@keyframes lianjie {
+	0% {
+		color: #3498db;
+	}
+	25% {
+		color: #d71345;
+	}
+	50% {
+		color: #f7acbc;
+	}
+	75% {
+		color: #d71345;
+	}
+	100% {
+		color: #3498db;
+	}
+}
+
+@-webkit-keyframes lianjie {
+	0% {
+		color: #3498db;
+	}
+	25% {
+		color: #d71345;
+	}
+	50% {
+		color: #f7acbc;
+	}
+	75% {
+		color: #d71345;
+	}
+	100% {
+		color: #3498db;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

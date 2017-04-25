@@ -79,23 +79,27 @@ function animate(){
 
 
  //判断 移动端 PC
-function IsPC() {      
-    var userAgentInfo = navigator.userAgent;
-    var Agents = ["Android", "iPhone",
-                "SymbianOS", "Windows Phone",
-                "iPad", "iPod"];
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-            break;
-        }
-    }
-    return flag;
-}
+var os = function() {  
+     var ua = navigator.userAgent,  
+     isWindowsPhone = /(?:Windows Phone)/.test(ua),  
+     isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,   
+     isAndroid = /(?:Android)/.test(ua),   
+     isFireFox = /(?:Firefox)/.test(ua),   
+     isChrome = /(?:Chrome|CriOS)/.test(ua),  
+     isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),  
+     isPhone = /(?:iPhone)/.test(ua) && !isTablet,  
+     isPc = !isPhone && !isAndroid && !isSymbian;  
+     return {  
+          isTablet: isTablet,  
+          isPhone: isPhone, 
+          isAndroid : isAndroid,  
+          isPc : isPc  
+     };  
+}();  
 
 
-if (!IsPC()) {
+
+if (!os.isPC) {
 	alert("不建议在移动端打开此网页");
 } else {
 	title.innerHTML="脑内世界";

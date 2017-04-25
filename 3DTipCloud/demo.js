@@ -93,7 +93,7 @@ function IsPC() {
     return flag;
 }
 
-if (IsPC()) {
+if (IsPC()==true) {
 
 	tagBall.addEventListener("mousemove",function(e){
 		angleX=-(e.clientX-this.offsetLeft-this.offsetWidth/2)*0.000005;

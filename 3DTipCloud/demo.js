@@ -93,7 +93,7 @@ function IsPC() {
     return flag;
 }
 
-//if (IsPC()) {
+if (IsPC()) {
 
 	tagBall.addEventListener("mousemove",function(e){
 		angleX=-(e.clientX-this.offsetLeft-this.offsetWidth/2)*0.000005;
@@ -123,8 +123,8 @@ function IsPC() {
 
 	init();
 	animate();
-//} else {
-//	alert("1")
-//}
+} else {
+	alert("不建议在移动端打开此网页，也许以后可以")
+}
 
 

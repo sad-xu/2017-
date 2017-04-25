@@ -100,7 +100,7 @@ var os = function() {
 
 
 if (!os.isPc) {
-	alert("不建议在移动端打开此网页");
+	title.innerHTML="不建议在移动端打开此网页";
 } else {
 	title.innerHTML="脑内世界";
 	tagBall.addEventListener("mousemove",function(e){

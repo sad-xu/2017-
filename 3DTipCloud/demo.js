@@ -1,5 +1,6 @@
 
 var tagBall=document.querySelectorAll(".tagBall")[0];
+var title=document.getElementById("title");
 var r=250;           	//半径
 
 var angleX=0.0002;
@@ -94,7 +95,7 @@ function IsPC() {
 }
 
 if (IsPC()==true) {
-
+	title.innerHTML="脑内世界";
 	tagBall.addEventListener("mousemove",function(e){
 		angleX=-(e.clientX-this.offsetLeft-this.offsetWidth/2)*0.000005;
 		angleY=-(e.clientY-this.offsetTop-this.offsetHeight/2)*0.000005;
@@ -108,7 +109,7 @@ if (IsPC()==true) {
 			fontColor=e.target.style.color;
 			e.target.style.color="grey";
 		}
-	})
+	});
 
 	tagBall.addEventListener("mouseout",function(e){
 		angleX=angleX/2;
@@ -118,9 +119,7 @@ if (IsPC()==true) {
 			e.target.style.fontSize="18px";
 			e.target.style.color=fontColor;
 		}
-	})
-
-
+	});
 	init();
 	animate();
 } else {

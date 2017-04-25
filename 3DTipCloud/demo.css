@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: black;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#title {
+	font-size: 20px;
+	margin-top: 20px;
+	color: white;
+}
+
+.tagBall {
+	position: relative;
+	width: 680px;
+	height: 500px;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+
+.tag {
+	display: block;
+	position: absolute;
+	font-weight: bold;
+	left: 0;
+	top: 0;
+	text-decoration: none;
+	opacity: 1;
+	z-index: 1;
+}

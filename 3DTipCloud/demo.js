@@ -94,7 +94,10 @@ function IsPC() {
     return flag;
 }
 
-if (IsPC()==true) {
+
+if (!IsPC()) {
+	alert("不建议在移动端打开此网页");
+} else {
 	title.innerHTML="脑内世界";
 	tagBall.addEventListener("mousemove",function(e){
 		angleX=-(e.clientX-this.offsetLeft-this.offsetWidth/2)*0.000005;
@@ -120,10 +123,8 @@ if (IsPC()==true) {
 			e.target.style.color=fontColor;
 		}
 	});
+
 	init();
 	animate();
-} else {
-	alert("不建议在移动端打开此网页，也许以后可以")
 }
-
 

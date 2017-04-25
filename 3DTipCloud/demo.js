@@ -99,7 +99,7 @@ var os = function() {
 
 
 
-if (!os.isPC) {
+if (os.isPC) {
 	alert("不建议在移动端打开此网页");
 } else {
 	title.innerHTML="脑内世界";
